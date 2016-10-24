@@ -1,0 +1,19 @@
+.footer {
+  padding: 2rem 0;
+  width: $stdWidth;
+  margin: 0 auto;
+  color: $grey;
+
+  .columns {
+    justify-content: space-between;
+  }
+
+  h4,
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $lightBlue;
+  }
+}

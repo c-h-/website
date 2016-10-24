@@ -1,0 +1,36 @@
+input,
+label,
+textarea {
+  display: block;
+}
+
+label {
+  color: $black;
+  margin: 1rem 0 0.1rem;
+}
+
+input,
+textarea {
+  border: 1px solid $medGrey;
+  resize: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 300px;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+input[type="submit"] {
+  margin-top: 1rem;
+  background-color: $blue;
+  color: $white;
+  border-radius: 0.5rem;
+  transition: background-color 300ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $lightBlue;
+  }
+}
