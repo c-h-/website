@@ -142,7 +142,31 @@
     }
   }
 
+  function convertPath(path, w, h) {
+    var ratio = window.devicePixelRatio || 1;
+    var name = path.slice(path.lastIndexOf('/') + 1);
+    return '//res.cloudinary.com/charlie-engineer/image/upload/dpr_'+ratio+',w_'+w+'/'+name; // h_'+h+',
+  }
+
+  function handleError(e) {
+    if ($(e.target).data('src')) {
+      $(e.target).attr('src', $(e.target).data('src'));
+      $(e.target).removeAttr('data-src');
+    }
+  }
+
+  function prepareImages() {
+    $('img').each(function(i, elem) {
+      var src = $(elem).data('src');
+      if (src && src.length) {
+        $(elem).on('error', handleError);
+        $(elem).attr('src', convertPath(src, $(elem).width(), $(elem).height()));
+      }
+    })
+  }
+
   $(function () {
+    prepareImages();
     prepareVideos();
     startCardScollers();
     startGifs();
