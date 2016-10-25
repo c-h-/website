@@ -38,13 +38,13 @@
   .slideshow {
     min-height: 200px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 
     >img,
     >div,
     >iframe {
-      top: auto;
+      // top: auto;
     }
   }
   .project {
