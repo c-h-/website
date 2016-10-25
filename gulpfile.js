@@ -11,8 +11,13 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     runSequence = require('run-sequence'),
     htmlmin = require('gulp-htmlmin'),
+    plumber = require('gulp-plumber'),
+    imageMin = require('gulp-imagemin'),
+    inlinesource = require('gulp-inline-source'),
     package = require('./package.json');
 
+// attach pagespeed_insights gulp tasks
+require('./pagespeed_insights');
 
 var banner = [
   '/*!\n' +
@@ -79,16 +84,34 @@ gulp.task('default', ['css', 'js', 'browser-sync'], function () {
 // builds for production
 gulp.task('build', function (cb) {
   mode = PRODUCTION;
-  runSequence(['css', 'js'], 'docs', 'optimize', cb);
+  runSequence(['css', 'js'], 'docs', ['optimize-html', 'optimize-images'], cb);
 });
 
 gulp.task('docs', function() {
-  gulp.src(['app/**/*', '!app/**/*.html'])
+  gulp.src([
+    'app/*',
+    '!app/*.html',
+    'app/**/*.css',
+    'app/**/*.js',
+  ])
     .pipe(gulp.dest('docs', { overwrite: true }));
 });
 
-gulp.task('optimize', function() {
+gulp.task('optimize-images', function() {
+  return gulp.src([
+    'app/assets/img/**/*',
+  ])
+    .pipe(plumber())
+    .pipe(imageMin({
+      progressive: true,
+      multipass: true,
+    }))
+    .pipe(gulp.dest('docs/assets/img', { overwrite: true }));
+})
+
+gulp.task('optimize-html', function() {
   gulp.src('app/**/*.html')
+    .pipe(inlinesource())
     .pipe(htmlmin({
       collapseWhitespace: true,
       collapseInlineTagWhitespace: false,
