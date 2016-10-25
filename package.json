@@ -28,7 +28,8 @@
     "jshint": "^2.8.0",
     "ngrok": "^2.2.3",
     "psi": "^2.0.4",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "sw-precache": "^4.2.1"
   },
   "dependencies": {}
 }

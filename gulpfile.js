@@ -14,6 +14,8 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     imageMin = require('gulp-imagemin'),
     inlinesource = require('gulp-inline-source'),
+    path = require('path'),
+    swPrecache = require('sw-precache'),
     package = require('./package.json');
 
 // attach pagespeed_insights gulp tasks
@@ -54,8 +56,8 @@ gulp.task('js',function(){
     .pipe(mode === DEV ? sourcemaps.init() : gutil.noop())
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
-    .pipe(header(banner, { package : package }))
-    .pipe(gulp.dest('app/assets/js'))
+    // .pipe(header(banner, { package : package })) // why output this?
+    // .pipe(gulp.dest('app/assets/js'))
     .pipe(uglify())
     .pipe(header(banner, { package : package }))
     .pipe(rename({ suffix: '.min' }))
@@ -84,7 +86,7 @@ gulp.task('default', ['css', 'js', 'browser-sync'], function () {
 // builds for production
 gulp.task('build', function (cb) {
   mode = PRODUCTION;
-  runSequence(['css', 'js'], 'docs', ['optimize-html', 'optimize-images'], cb);
+  runSequence(['css', 'js'], 'docs', ['optimize-html', 'optimize-images'], 'worker', cb);
 });
 
 gulp.task('docs', function() {
@@ -107,7 +109,7 @@ gulp.task('optimize-images', function() {
       multipass: true,
     }))
     .pipe(gulp.dest('docs/assets/img', { overwrite: true }));
-})
+});
 
 gulp.task('optimize-html', function() {
   gulp.src('app/**/*.html')
@@ -128,4 +130,24 @@ gulp.task('optimize-html', function() {
       useShortDoctype: true,
     }))
     .pipe(gulp.dest('docs', { overwrite: true }));
-})
+});
+
+gulp.task('worker', ['generate-service-worker'], function() {
+  gulp.src('docs/service-worker.js')
+    .pipe(mode === DEV ? sourcemaps.init() : gutil.noop())
+    .pipe(uglify())
+    .pipe(mode === DEV ? sourcemaps.write() : gutil.noop())
+    .pipe(gulp.dest('docs', { overwrite: true }))
+    .pipe(mode === DEV ? browserSync.reload({stream:true, once: true}) : gutil.noop());
+});
+
+gulp.task('generate-service-worker', function(callback) {
+  var rootDir = 'docs';
+
+  swPrecache.write(path.join(rootDir, 'service-worker.js'), {
+    // ALL FILES are immediately cached so let's be judicious on what we ask for
+    // no css, it's all inlined
+    staticFileGlobs: [rootDir + '/**/*.{js,html,png,jpg,gif,svg,eot,ttf,woff}'],
+    stripPrefix: rootDir
+  }, callback);
+});
