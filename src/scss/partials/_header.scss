@@ -1,5 +1,27 @@
 .header {
-  >h1 {
-    margin: 4rem 0;
+  margin: 4rem 0;
+  position: relative;
+
+  &:after,
+  &:before {
+    content: ' ';
+    display: block;
+    width: 20%;
+    height: 4px;
+    background: $black;
+    position: absolute;
+    top: 29px;
+    left: 20%;
+    z-index: -1;
+  }
+  &:before {
+    right: 20%;
+    left: auto;
+  }
+
+  img {
+    width: 4rem;
+    display: block;
+    margin: 0 auto;
   }
 }

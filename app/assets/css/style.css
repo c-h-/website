@@ -463,8 +463,26 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-.header > h1 {
-  margin: 4rem 0; }
+.header {
+  margin: 4rem 0;
+  position: relative; }
+  .header:after, .header:before {
+    content: ' ';
+    display: block;
+    width: 20%;
+    height: 4px;
+    background: #212529;
+    position: absolute;
+    top: 29px;
+    left: 20%;
+    z-index: -1; }
+  .header:before {
+    right: 20%;
+    left: auto; }
+  .header img {
+    width: 4rem;
+    display: block;
+    margin: 0 auto; }
 
 .hero > a,
 .hero .about-me {

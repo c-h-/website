@@ -89,11 +89,11 @@ gulp.task('refresh-html', function(cb) {
 });
 
 gulp.task('refresh-js', function(cb) {
-  runSequence('js', 'docs', 'worker', 'bs-reload', cb);
+  runSequence('js', 'docs', 'optimize-html', 'worker', 'bs-reload', cb);
 });
 
 gulp.task('refresh-css', function(cb) {
-  runSequence('css', 'docs', 'worker', 'bs-reload', cb);
+  runSequence('css', 'docs', 'optimize-html', 'worker', 'bs-reload', cb);
 });
 
 // builds for production
