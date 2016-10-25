@@ -59,8 +59,6 @@ if ('serviceWorker' in navigator) {
 
 (function ($, window, document, undefined) {
 
-  'use strict';
-
   var IMG_INTERVAL = 5000;
   var OTHER_INTERVAL = 10000;
   var ACTIVE_CLASS = 'active';

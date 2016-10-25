@@ -69,7 +69,7 @@ gulp.task('js',function(){
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
         server: {
-            baseDir: "app"
+            baseDir: "docs"
         }
     });
 });
@@ -77,10 +77,23 @@ gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-gulp.task('default', ['css', 'js', 'browser-sync'], function () {
-    gulp.watch("src/scss/*/*.scss", ['css']);
-    gulp.watch("src/js/*.js", ['js']);
-    gulp.watch("app/*.html", ['bs-reload']);
+gulp.task('default', ['build'], function () {
+  runSequence('browser-sync');
+  gulp.watch("src/scss/*/*.scss", ['refresh-css']);
+  gulp.watch("src/js/*.js", ['refresh-js']);
+  gulp.watch("app/*.html", ['refresh-html']);
+});
+
+gulp.task('refresh-html', function(cb) {
+  runSequence('docs', 'optimize-html', 'worker', 'bs-reload', cb);
+});
+
+gulp.task('refresh-js', function(cb) {
+  runSequence('js', 'docs', 'worker', 'bs-reload', cb);
+});
+
+gulp.task('refresh-css', function(cb) {
+  runSequence('css', 'docs', 'worker', 'bs-reload', cb);
 });
 
 // builds for production
