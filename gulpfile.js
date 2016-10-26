@@ -108,6 +108,9 @@ gulp.task('docs', function() {
     '!app/*.html',
     'app/**/*.css',
     'app/**/*.js',
+    'app/**/*.mp4',
+    'app/**/*.m4a',
+    'app/**/*.webm',
   ])
     .pipe(gulp.dest('docs', { overwrite: true }));
 });
@@ -135,7 +138,7 @@ gulp.task('optimize-html', function() {
       minifyURLs: true,
       removeComments: true,
       removeRedundantAttributes: true,
-      removeOptionalTags: true,
+      // removeOptionalTags: true, // AMP does not allow this
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true,
       sortAttributes: true,

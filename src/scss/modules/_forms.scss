@@ -22,6 +22,10 @@ textarea {
   }
 }
 
+input[name="_gotcha"] {
+  display: none;
+}
+
 input[type="submit"] {
   margin-top: 1rem;
   background-color: $blue;

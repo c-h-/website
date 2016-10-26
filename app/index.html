@@ -1,12 +1,14 @@
 <!doctype html>
-<html>
+<html amp lang="en">
   <head>
     <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link rel="canonical" href="https://charlie.engineer/" />
     <title>Charlie Hulcher - Engineer</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta name="description" content="Personal website of Charlie Hulcher" />
     <meta name="robots" content="NOODP, index, follow" />
     <meta itemprop="name" content="Charlie Hulcher - Engineer">
@@ -49,30 +51,137 @@
     <!-- Chrome Theme Color -->
     <meta name="theme-color" content="#f8f9fa">
 
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="https://fonts.googleapis.com/css?family=Hind|Montserrat" rel="stylesheet">
-    <link href="assets/css/style.min.css" rel="stylesheet" inline>
+    <link href="assets/css/style.min.css" rel="stylesheet" inline amp-custom>
     <link rel="manifest" href="/manifest.json">
+
+    <!-- AMP -->
+    <script async custom-element="amp-gfycat" src="https://cdn.ampproject.org/v0/amp-gfycat-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
   </head>
   <body>
 
     <header class="header" role="banner">
-      <img src="./assets/img/logo.png" alt="CFH Logo" />
+      <div class="image">
+        <amp-img
+          src="./assets/img/logo.png"
+          width="376"
+          height="376"
+          layout="responsive"
+          alt="Charlie Hulcher Logo">
+        </amp-img>
+        <noscript>
+          <img src="./assets/img/logo.png" alt="Charlie Hulcher Logo" />
+        </noscript>
+      </div>
       <h1>Charlie Hulcher</h1>
     </header>
 
     <main class="main" role="main">
       <section class="hero columns">
         <a href="https://instagram.com/that_c_h/" target="_blank">
-          <div class="slideshow">
-            <img src="./assets/img/instagram/flowers.jpg" alt="Flower pattern from U.S. Botanical Gardens" />
-            <img src="./assets/img/instagram/austin.jpg" alt="Austin TX skyscrapers" />
-            <img src="./assets/img/instagram/bird.jpg" alt="Pidgeon in Mombasa" />
-            <img src="./assets/img/instagram/castle.jpg" alt="Castle in England" />
-            <img src="./assets/img/instagram/falls.jpg" alt="Great Falls VA" />
-            <img src="./assets/img/instagram/lions.jpg" alt="Sea Lions in La Jolla" />
-            <img src="./assets/img/instagram/patties.jpg" alt="Rice Patties in China" />
-            <img src="./assets/img/instagram/trees.jpg" alt="Trees in Yosemite" />
+          <div class="slideshow" id="hero-slides">
+            <div class="image">
+              <amp-img
+                src="./assets/img/instagram/flowers.jpg"
+                width="460"
+                height="460"
+                layout="responsive"
+                alt="Flower pattern from U.S. Botanical Gardens">
+              </amp-img>
+              <noscript>
+                <img src="./assets/img/instagram/flowers.jpg" alt="Flower pattern from U.S. Botanical Gardens" />
+              </noscript>
+            </div>
+            <div class="image">
+              <amp-img
+                src="./assets/img/instagram/austin.jpg"
+                width="460"
+                height="460"
+                layout="responsive"
+                alt="Austin TX skyscrapers">
+              </amp-img>
+              <noscript>
+                <img src="./assets/img/instagram/austin.jpg" alt="Austin TX skyscrapers" />
+              </noscript>
+            </div>
+            <div class="image">
+              <amp-img
+                src="./assets/img/instagram/falls.jpg"
+                width="460"
+                height="460"
+                layout="responsive"
+                alt="Great Falls VA">
+              </amp-img>
+              <noscript>
+                <img src="./assets/img/instagram/falls.jpg" alt="Great Falls VA" />
+              </noscript>
+            </div>
+            <div class="image">
+              <amp-img
+                src="./assets/img/instagram/bird.jpg"
+                width="460"
+                height="460"
+                layout="responsive"
+                alt="Pidgeon in Mombasa">
+              </amp-img>
+              <noscript>
+                <img src="./assets/img/instagram/bird.jpg" alt="Pidgeon in Mombasa" />
+              </noscript>
+            </div>
+            <div class="image">
+              <amp-img
+                src="./assets/img/instagram/patties.jpg"
+                width="460"
+                height="460"
+                layout="responsive"
+                alt="Rice Patties in China">
+              </amp-img>
+              <noscript>
+                <img src="./assets/img/instagram/patties.jpg" alt="Rice Patties in China" />
+              </noscript>
+            </div>
+            <div class="image">
+              <amp-img
+                src="./assets/img/instagram/trees.jpg"
+                width="460"
+                height="460"
+                layout="responsive"
+                alt="Trees in Yosemite">
+              </amp-img>
+              <noscript>
+                <img src="./assets/img/instagram/trees.jpg" alt="Trees in Yosemite" />
+              </noscript>
+            </div>
+            <div class="image">
+              <amp-img
+                src="./assets/img/instagram/castle.jpg"
+                width="460"
+                height="460"
+                layout="responsive"
+                alt="Castle in England">
+              </amp-img>
+              <noscript>
+                <img src="./assets/img/instagram/castle.jpg" alt="Castle in England" />
+              </noscript>
+            </div>
+            <div class="image">
+              <amp-img
+                src="./assets/img/instagram/lions.jpg"
+                width="460"
+                height="460"
+                layout="responsive"
+                alt="Sea Lions in La Jolla">
+              </amp-img>
+              <noscript>
+                <img src="./assets/img/instagram/lions.jpg" alt="Sea Lions in La Jolla" />
+              </noscript>
+            </div>
           </div>
         </a>
         <div class="about-me">
@@ -96,10 +205,40 @@
         <article class="project">
           <h2>App Designer</h2>
           <div class="columns">
-            <div class="slideshow">
-              <img src="./assets/img/projects/app_designer/app_designer.jpg" alt="Screenshot of UpChannel App Designer" />
-              <div style="max-width: 90%; overflow: hidden" id="_giphy_3oz8xC3irvW5bohdAY"></div>
-              <img src="./assets/img/projects/app_designer/app_designer_2.png" alt="Screenshot of UpChannel Dashboard" />
+            <div class="slideshow rectangle slides-3">
+              <div class="image">
+                <amp-img
+                  src="./assets/img/projects/app_designer/app_designer_2.png"
+                  width="511"
+                  height="383"
+                  layout="responsive"
+                  alt="Screenshot of UpChannel Dashboard">
+                </amp-img>
+                <noscript>
+                  <img src="./assets/img/projects/app_designer/app_designer_2.png" alt="Screenshot of UpChannel Dashboard" />
+                </noscript>
+              </div>
+              <!-- <div class="giphy" id="_giphy_3oz8xC3irvW5bohdAY"></div> -->
+              <div class="image">
+                <amp-gfycat
+                  data-gfyid="BackGenerousJunebug"
+                  width="640"
+                  height="360"
+                  layout="responsive">
+                </amp-gfycat>
+              </div>
+              <div class="image">
+                <amp-img
+                  src="./assets/img/projects/app_designer/app_designer.jpg"
+                  width="552"
+                  height="302"
+                  layout="responsive"
+                  alt="Screenshot of UpChannel App Designer">
+                </amp-img>
+                <noscript>
+                  <img src="./assets/img/projects/app_designer/app_designer.jpg" alt="Screenshot of UpChannel App Designer" />
+                </noscript>
+              </div>
             </div>
             <div class="body">
               <h4><time datetime="1420088400000">Jan. 2015</time> - Present</h4>
@@ -124,10 +263,46 @@
         <article class="project">
           <h2>Tred - Virtual Reality Immersion</h2>
           <div class="columns">
-            <div class="slideshow">
-              <img src="./assets/img/projects/tred/tred_1.jpg" alt="Demo of Tred" />
-              <img src="./assets/img/projects/tred/tred_2.jpg" alt="Tred Team with Medals" />
-              <div class="vid" data-id="YEyHI_3PDMc"></div>
+            <div class="slideshow rectangle slides-3">
+              <div class="vid" data-id="YEyHI_3PDMc">
+                <amp-video
+                  width=1280
+                  height=720
+                  src="./assets/video/tred.mp4"
+                  layout="responsive"
+                  autoplay
+                  loop
+                >
+                  <div fallback>
+                    <p>Your browser doesn’t support HTML5 video</p>
+                  </div>
+                  <source type="video/mp4" src="./assets/video/tred.mp4">
+                </amp-video>
+              </div>
+              <div class="image">
+                <amp-img
+                  src="./assets/img/projects/tred/tred_2.jpg"
+                  width="521"
+                  height="347"
+                  layout="responsive"
+                  alt="Tred Team with Medals">
+                </amp-img>
+                <noscript>
+                  <img src="./assets/img/projects/tred/tred_2.jpg" alt="Tred Team with Medals" />
+                </noscript>
+              </div>
+              <div class="image">
+                <amp-img
+                  src="./assets/img/projects/tred/tred_1.jpg"
+                  width="552"
+                  height="307"
+                  layout="responsive"
+                  alt="Demo of Tred">
+                </amp-img>
+                <noscript>
+                  <img src="./assets/img/projects/tred/tred_1.jpg" alt="Demo of Tred" />
+                </noscript>
+              </div>
             </div>
             <div class="body">
               <h4><time datetime="1396324800000">April 2014</time> - Present</h4>
@@ -159,7 +334,23 @@
         <article class="project">
           <h2>Autonomous Hovercraft</h2>
           <div class="columns">
-            <div class="vid" data-id="N4W2HqCPJw8"></div>
+            <div class="slideshow rectangle slides-1">
+              <div class="vid" data-id="N4W2HqCPJw8">
+                <amp-video
+                  width=1280
+                  height=720
+                  src="./assets/video/hovercraft.mp4"
+                  layout="responsive"
+                  autoplay
+                  loop
+                >
+                  <div fallback>
+                    <p>Your browser doesn’t support HTML5 video</p>
+                  </div>
+                  <source type="video/mp4" src="./assets/video/hovercraft.mp4">
+                </amp-video>
+              </div>
+            </div>
             <div class="body">
               <h4><time datetime="">May 2012</time></h4>
               <p>Won college-wide Clark School of Engineering freshman competition.</p>
@@ -175,14 +366,76 @@
       </section>
       <section class="more-projects">
         <h3>More Projects</h3>
-        <div class="card-container-outer hide-left">
-          <div class="card-container">
-            <article class="card">
+        <div class="columns">
+          <amp-accordion>
+            <section class="card" expanded>
+              <h2>Amation - SVG Animation Tool</h2>
+              <div>
+                <div class="slideshow rectangle slides-2">
+                  <div class="image">
+                    <amp-img
+                      src="./assets/img/projects/amation/amation_1.png"
+                      width="201"
+                      height="113"
+                      layout="responsive"
+                      alt="Amation UI">
+                    </amp-img>
+                    <noscript>
+                      <img src="./assets/img/projects/amation/amation_1.png" alt="Amation UI" />
+                    </noscript>
+                  </div>
+                  <div class="image">
+                    <amp-img
+                      src="./assets/img/projects/amation/amation_2.jpg"
+                      width="201"
+                      height="113"
+                      layout="responsive"
+                      alt="Amation Usage">
+                    </amp-img>
+                    <noscript>
+                      <img src="./assets/img/projects/amation/amation_2.jpg" alt="Amation Usage" />
+                    </noscript>
+                  </div>
+                </div>
+                <div class="body">
+                  <p>Won First Prize with Amation at Penn Apps X hackathon.</p>
+                  <p>Create rich, deployable animations from svg layers through a slick online interface. Team of four built in 24 hours.</p>
+                  <div class="tags">
+                    <span>SVG</span>
+                    <span>JS</span>
+                    <span>HTML/CSS</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="card">
               <h2>Essential School Tools</h2>
-              <div class="columns">
-                <div class="slideshow">
-                  <img src="./assets/img/projects/est/est.png" class="Essential School Tools on Android" />
-                  <img src="./assets/img/projects/est/est_2.png" class="Essential School Tools on Chrome" />
+              <div>
+                <div class="slideshow tall slides-2">
+                  <div class="image">
+                    <amp-img
+                      src="./assets/img/projects/est/est.png"
+                      width="201"
+                      height="268"
+                      layout="fixed"
+                      alt="Essential School Tools on Android">
+                    </amp-img>
+                    <noscript>
+                      <img src="./assets/img/projects/est/est.png" alt="Essential School Tools on Android" />
+                    </noscript>
+                  </div>
+                  <div class="image">
+                    <amp-img
+                      src="./assets/img/projects/est/est_2.png"
+                      width="192"
+                      height="300"
+                      layout="fixed"
+                      alt="Essential School Tools on Chrome">
+                    </amp-img>
+                    <noscript>
+                      <img src="./assets/img/projects/est/est_2.png" class="Essential School Tools on Chrome" />
+                    </noscript>
+                  </div>
                 </div>
                 <div class="body">
                   <p>Automated tools that make life easier as a student.</p>
@@ -201,31 +454,35 @@
                   </div>
                 </div>
               </div>
-            </article>
-            <article class="card">
-              <h2>Amation - SVG Animation Tool</h2>
-              <div class="columns">
-                <div class="slideshow">
-                  <img src="./assets/img/projects/amation/amation_1.png" class="Amation UI" />
-                  <img src="./assets/img/projects/amation/amation_2.jpg" class="Amation Usage" />
-                </div>
-                <div class="body">
-                  <p>Won First Prize with Amation at Penn Apps X hackathon.</p>
-                  <p>Create rich, deployable animations from svg layers through a slick online interface. Team of four built in 24 hours.</p>
-                  <div class="tags">
-                    <span>SVG</span>
-                    <span>JS</span>
-                    <span>HTML/CSS</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="card">
+            </section>
+            <section class="card">
               <h2>TEDxUMD</h2>
-              <div class="columns">
-                <div class="slideshow">
-                  <img src="./assets/img/projects/tedx/tedx_1.jpg" class="TEDxUMD" />
-                  <img src="./assets/img/projects/tedx/tedx_2.jpg" class="TEDxUMD" />
+              <div>
+                <div class="slideshow rectangle slides-2">
+                  <div class="image">
+                    <amp-img
+                      src="./assets/img/projects/tedx/tedx_1.jpg"
+                      width="201"
+                      height="111"
+                      layout="responsive"
+                      alt="TEDxUMD">
+                    </amp-img>
+                    <noscript>
+                      <img src="./assets/img/projects/tedx/tedx_1.jpg" alt="TEDxUMD" />
+                    </noscript>
+                  </div>
+                  <div class="image">
+                    <amp-img
+                      src="./assets/img/projects/tedx/tedx_2.jpg"
+                      width="201"
+                      height="165"
+                      layout="responsive"
+                      alt="TEDxUMD">
+                    </amp-img>
+                    <noscript>
+                      <img src="./assets/img/projects/tedx/tedx_2.jpg" alt="TEDxUMD" />
+                    </noscript>
+                  </div>
                 </div>
                 <div class="body">
                   <p>Served as Logistics, Production, and Web Lead on Executive Leadership Team for 2 years.</p>
@@ -236,8 +493,8 @@
                   </div>
                 </div>
               </div>
-            </article>
-            <article class="card small">
+            </section>
+            <section class="card">
               <h2>Node Run Command</h2>
               <div class="body">
                 <p>An easy to use NPM package for running terminal commands from Node. Supports sequential/parallel and useful options. Callbacks and promises supported.</p>
@@ -254,12 +511,25 @@
                   <span>NPM</span>
                 </div>
               </div>
-            </article>
-            <article class="card">
+            </section>
+          </amp-accordion>
+          <amp-accordion>
+            <section class="card" expanded>
               <h2>Indoor Navigation</h2>
-              <div class="columns">
-                <div class="slideshow">
-                  <img src="./assets/img/projects/viasat_1.png" class="Indoor Mapping UI" />
+              <div>
+                <div class="slideshow rectangle slides-1">
+                  <div class="image">
+                    <amp-img
+                      src="./assets/img/projects/viasat_1.png"
+                      width="201"
+                      height="178"
+                      layout="responsive"
+                      alt="Indoor Mapping UI">
+                    </amp-img>
+                    <noscript>
+                      <img src="./assets/img/projects/viasat_1.png" alt="Indoor Mapping UI" />
+                    </noscript>
+                  </div>
                 </div>
                 <div class="body">
                   <p>Won nation-wide ViaSat intern hackathon.</p>
@@ -271,8 +541,8 @@
                   </div>
                 </div>
               </div>
-            </article>
-            <article class="card small">
+            </section>
+            <section class="card">
               <h2>Machine Learning</h2>
               <div class="body">
                 <p>Hand coded different machine learning classifiers and cluster strategies. Used to recognize hand-written digits from a USPS data-set.</p>
@@ -280,8 +550,8 @@
                   <span>Matlab</span>
                 </div>
               </div>
-            </article>
-            <article class="card small">
+            </section>
+            <section class="card">
               <h2>Modeling Epidemics</h2>
               <div class="body">
                 <p>Used deterministic methods to build and fit models to outbreak data from the CDC in order to explore the affect of different parameters on fit.</p>
@@ -289,8 +559,8 @@
                   <span>Matlab</span>
                 </div>
               </div>
-            </article>
-            <article class="card small">
+            </section>
+            <section class="card">
               <h2>Seq &amp; Wine Me!</h2>
               <div class="body">
                 <p>Part of two hackathon teams at the first YC Hacks, hosted by Y Combinator.</p>
@@ -303,8 +573,8 @@
                   <span>Cordova</span>
                 </div>
               </div>
-            </article>
-          </div>
+            </section>
+          </amp-accordion>
         </div>
       </section>
       <section class="blog">
@@ -312,14 +582,14 @@
         <div class="columns">
           <div>
             <a
-              href=""
+              href="https://medium.com/@chulcher/coding-is-creative-c85b7566a41b"
               target="_blank"
             >
               <h2>Coding is Creative</h2>
               <h4>April 9, 2016</h4>
             </a>
             <a
-              href=""
+              href="https://medium.com/@chulcher/summer-is-for-adventure-8abbe3116d15"
               target="_blank"
             >
               <h2>Summer is for Adventure</h2>
@@ -328,7 +598,7 @@
           </div>
           <div>
             <a
-              href=""
+              href="https://medium.com/@chulcher/creating-an-android-enabled-robot-operating-system-embedded-cluster-d030069b7bfc"
               target="_blank"
             >
               <h2>Guide - Building Robot Operating System Enabled Android Apps</h2>
@@ -341,11 +611,11 @@
 
     <footer class="footer" role="contentinfo">
       <div class="columns">
-        <form action="https://formspree.io/charlie.hulcher+website@gmail.com" method="POST">
+        <form action="https://formspree.io/charlie.hulcher+website@gmail.com" method="POST" target="_top">
           <h4>Get In Touch</h4>
-          <label for="name" required><span>Name</span></label>
+          <label for="name">Name</label>
           <input type="text" id="name" required name="name" class="input" />
-          <label for="_replyto" required><span>Email</span></label>
+          <label for="_replyto">Email</label>
           <input type="email" id="_replyto" required name="_replyto" class="input" />
           <label for="messages">Message</label>
           <textarea id="messages" name="messages" class="input"></textarea>
@@ -354,27 +624,31 @@
           <input type="hidden" name="_format" value="plain" />
           <input type="hidden" name="_subject" value="Personal Website Contact Submission" />
           <input type="hidden" name="_next" value="//charlie.engineer" />
-          <input type="text" name="_gotcha" style="display:none" />
+          <input type="text" name="_gotcha" />
         </form>
         <div class="credits">
           <p>Copyright 2016; All Rights Reserved.</p>
           <h4>Credits</h4>
-          <p>Colors: <a href="https://yeun.github.io/open-color/" target="_blank">Open Color</a></p>
           <p>Fonts: <a href="https://fonts.google.com/" target="_blank">Google Fonts</a></p>
+          <p>Accessible Colors: <a href="https://yeun.github.io/open-color/" target="_blank">Open Color</a></p>
+          <p>Hosting: <a href="https://www.netlify.com/" target="_blank">Netlify</a></p>
+          <p>Security: <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a></p>
+          <p>Speed: <a href="https://ampproject.org/" target="_blank">AMP Project</a></p>
+          <p>Progressive: <a href="https://github.com/GoogleChrome/lighthouse" target="_blank">Lighthouse</a></p>
+          <p>Offline/Caching: <a href="https://github.com/GoogleChrome/sw-precache" target="_blank">Service Worker</a></p>
         </div>
       </div>
     </footer>
 
-    <script src="./assets/components/jquery/jquery.min.js"></script>
-    <script src="./assets/js/scripts.min.js"></script>
+    <!-- handled by amp <script src="./assets/components/jquery/jquery.min.js"></script>
+    <script src="./assets/js/scripts.min.js"></script> -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-15541633-40', 'auto');ga('send', 'pageview');
-    </script>
+    <amp-analytics type="googleanalytics" id="analytics1">
+      <script type="application/json">{"vars":{"account":"UA-15541633-40"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}</script>
+    </amp-analytics>
+    <amp-install-serviceworker
+      src="./service-worker.js"
+      layout="nodisplay">
+    </amp-install-serviceworker>
   </body>
 </html>

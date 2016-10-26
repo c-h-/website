@@ -9,11 +9,6 @@ body {
   overflow-x: hidden;
 }
 
-section {
-  width: $stdWidth;
-  margin: 0 auto 8rem;
-}
-
 h1,
 h2,
 h3,
@@ -54,6 +49,7 @@ pre {
 .columns {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
 }
 
 a:active {

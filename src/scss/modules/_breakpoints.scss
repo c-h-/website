@@ -5,12 +5,16 @@
 
 }
 @media only screen and (max-width:768px) {
+  .header {
+    margin-bottom: 2rem;
+  }
   section {
     margin-bottom: 5rem;
   }
   h2 {
     padding: 0 2rem;
     font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
   h2,
   h3,
@@ -36,10 +40,20 @@
     }
   }
   .slideshow {
-    min-height: 200px;
+    min-height: 300px;
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    &.rectangle {
+      min-height: 200px;
+    }
+
+    >.image,
+    >.vid {
+      width: 300px;
+      height: auto;
+    }
 
     >img,
     >div,
@@ -56,12 +70,12 @@
 
     >* {
       &:not(.vid) {
-        width: 100% !important;
+        width: 100%;
       }
-      margin-bottom: 2rem !important;
+      margin-bottom: 2rem;
 
       &:last-child {
-        margin-bottom: 0 !important;
+        margin-bottom: 0;
       }
     }
     >.vid {
@@ -91,7 +105,7 @@
   }
 }
 @media only screen and (max-width:1024px) {
-  section,
+  .main>section,
   .footer {
     width: 100vw;
   }
