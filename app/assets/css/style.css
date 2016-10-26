@@ -572,12 +572,12 @@ amp-accordion {
   padding: 1rem;
   width: 100%;
   box-sizing: border-box; }
-  .card .-amp-accordion-header {
+  .card h2 {
     background-color: transparent;
     color: #228ae6;
     transition: color 300ms ease-in-out;
     border: none; }
-    .card .-amp-accordion-header:hover {
+    .card h2:hover {
       color: #4dadf7; }
   .card.small {
     width: 20rem; }

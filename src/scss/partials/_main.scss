@@ -118,7 +118,7 @@ amp-accordion {
   width: 100%;
   box-sizing: border-box;
 
-  .-amp-accordion-header {
+  h2 {
     background-color: transparent;
     color: $blue;
     transition: color 300ms ease-in-out;
