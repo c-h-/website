@@ -1,6 +1,14 @@
 # Charlie Hulcher Personal Website
 My personal website.
 
+# Commands
+```sh
+gulp # run dev server
+gulp build # production build
+```
+
+# Built files
+Built files are in docs.
 
 ## License
 
