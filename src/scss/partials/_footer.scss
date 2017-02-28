@@ -15,5 +15,9 @@
 
   a {
     color: $lightBlue;
+
+    &:hover {
+      color: $green;
+    }
   }
 }
