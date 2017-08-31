@@ -9,6 +9,10 @@
     "type": "git",
     "url": "https://github.com/c-h-/c-h-.github.io.git"
   },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.0",
